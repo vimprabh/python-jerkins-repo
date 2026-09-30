@@ -1,0 +1,20 @@
+[project]
+name = "jenkins-uv-starter"
+version = "0.1.0"
+description = "A minimal Python project for a Jenkins pipeline using uv"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+hello-jenkins = "jenkins_uv_starter.app:main"
+
+[dependency-groups]
+dev = ["pytest>=8,<10"]
+
+[build-system]
+requires = ["uv_build>=0.12,<0.13"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
