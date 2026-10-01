@@ -12,6 +12,8 @@ properties([
 ])
 
 node {
+    env.DOCKER_BIN = '/usr/local/bin/docker'
+    env.PATH = "/usr/local/bin:${env.PATH}"
     try {
         stage('Checkout') {
             deleteDir()
